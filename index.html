@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="description" content="中国成长记录——经济篇,The diary of the growing economy of china">
+    <meta name="keywords" content="镝次元，dyClub，中国成长记录，两会，十二五，五年计划">
+    <meta name="author" content="dyClub">
+
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <title>中国成长记录经济篇</title>
+    <link rel="icon" href="http://static.dyclub.org/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <style>
+        td{
+            width:50%;
+            height:15%;
+        }
+    </style>
+</head>
+<body onload="$('.storyText').scrollLeft(2000);">
+<!-- **************** 未锁定屏幕状态下，横屏提示 ******************** -->
+<div id="hint">
+    <img src="img/hint.png" alt="未锁定屏幕时横屏提示" id="hint-img">
+</div>
+<div class="swiper-container">
+    <!-- **************** menu ******************** -->
+    <div class="absolute nav"><img src="img/nav.png"></div>
+    <div class="absolute menu"><img class="link_story" src="img/menu_story.png" /><img class="link_data" src="img/menu_data.png" /><img class="link_video" src="img/menu_video.png" /></div>
+
+    <div class="swiper-wrapper">
+        <!-- **************** page0 ******************** -->
+        <div class="swiper-slide page0" id="page0">
+                <div class="absolute ani"  swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0.3s" id="p0_1"><img src="img/p0_1.png" /></div>
+                <div class="absolute ani"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.9s" id="p0_2"><img src="img/p0_2.png" /></div>
+                <div class="absolute ani"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.2s" id="p0_3"><img src="img/p0_3.png" /></div>
+        </div>
+        
+        <!-- **************** page video ******************** -->
+        <div class="swiper-slide page1" id="page_video">
+          <div class="rotate_container">
+                <img id="video_title" src="img/video_title_horizontal.png">
+                <div id="video_container">
+                    <iframe id="video" class="video_iframe" src="http://v.qq.com/iframe/player.html?vid=r0188udi0je&amp;auto=0" allowfullscreen="" frameborder="0"></iframe>
+                    <img id="video_cover" src="img/video_cover_horizontal.png">
+                    <!-- <video id="video"  src="http://res.dyclub.org/video%2F2016_03_conferences_analyze"></video> -->
+                </div>
+            </div>
+        </div>
+        <!-- **************** graphPage1 ******************** -->
+            <div class="swiper-slide page2 graphContainer" id="graphContainer1">
+                <div id="graphPage1">
+                    <div class="graphHead">
+                        <img src="img/gdpTitle.png" alt="gdp增长率标题" class="graphTitle">
+                        <img src="img/legend1.png" alt="图例" class="graphLegend">
+                    </div>
+                    <div id="svg-area"></div>
+                    <div class="graphFooter">
+                        <span class="graphComment">注：GDP指国内生产总值</span>
+                        <span class="graphCome">数据来源：国家统计局</span>
+                    </div>
+                </div>
+            </div>
+            <!-- **************** graphPage2 ******************** -->
+            <div class="swiper-slide page3 graphContainer" id="graphContainer2">
+                <div id="graphPage2">
+                    <div class="graphHead">
+                        <img src="img/giniTitle.png" alt="基尼系数标题" class="graphTitle">
+
+                        <img src="img/giniLegend.png" alt="图例" class="graphLegend Gini">
+                        <img src="img/engelLegend.png" alt="图例" class="graphLegend Engel" >
+                        <img src="img/lifeLengthLegend.png" alt="图例" class="graphLegend lifeLength" >
+                        <img src="img/literacyRateLegend.png" alt="图例" class="graphLegend literacyRate" >
+                    </div>
+                    <div id="svg-area2"></div>
+                    <div class="graphFooter">
+                        <span class="graphComment">注：基尼系数是判断收入分配公平程度的指标，基尼指数越高说明贫富差距越大</span>
+                        <span class="graphCome">数据来源：世界银行，各国政府统计机构,国家统计局</span>
+                    </div>
+                </div>
+            </div>
+        <!-- **************** page game ******************** -->
+        <div class="swiper-slide page4" id="page_game">
+            <div id="cover_layer">
+                <img id="detail_data" src="img/detail_data.png">
+            </div>
+            <div id="cover_select">
+            </div>
+            <img id="game_texture" src="img/game_texture.png">
+            <img id="game_title" src="img/game_title.png">
+            <img id="chose_title" src="img/chose_title.png">
+            <img id="year_title" src="img/decades.png">
+            <img id="area_title" src="img/area.png">
+            <img id="countryside" src="img/countryside.png">
+            <img id="city" src="img/city.png">
+            <img id="go_to_res" src="img/go_to_res.png">
+            <img id="result" src="img/result.png">
+            <div id="chose_info"><span>你在</span><span id="display_year">？</span><span>年工作一年，能赚到</span><span
+                    id="number">？</span><span>块金币</span></div>
+            <img id="show_detail" src="img/show_detail.png">
+            <div id="selectBar">
+                <div id="year">1985</div>
+                <div id="arrow"></div>
+            </div>
+            <div id="selectOptions">
+                <div id="ulContainer">
+                    <ul id="ulOptions">
+                        <li class="unselected">1985</li>
+                        <li class="unselected">1986</li>
+                        <li class="unselected">1987</li>
+                        <li class="unselected">1988</li>
+                        <li class="unselected">1989</li>
+                        <li class="unselected">1990</li>
+                        <li class="unselected">1991</li>
+                        <li class="unselected">1992</li>
+                        <li class="unselected">1993</li>
+                        <li class="unselected">1994</li>
+                        <li class="unselected">1995</li>
+                        <li class="unselected">1996</li>
+                        <li class="unselected">1997</li>
+                        <li class="unselected">1998</li>
+                        <li class="unselected">1999</li>
+                        <li class="unselected">2000</li>
+                        <li class="unselected">2001</li>
+                        <li class="unselected">2002</li>
+                        <li class="unselected">2003</li>
+                        <li class="unselected">2004</li>
+                        <li class="unselected">2005</li>
+                        <li class="unselected">2006</li>
+                        <li class="unselected">2007</li>
+                        <li class="unselected">2008</li>
+                        <li class="unselected">2009</li>
+                        <li class="unselected">2010</li>
+                        <li class="unselected">2011</li>
+                        <li class="unselected">2012</li>
+                        <li class="unselected">2013</li>
+                        <li class="unselected">2014</li>
+                        <li class="unselected">2015</li>
+                    </ul>
+                </div>
+                <div id="control">
+                    <div id="back" class="button_disable"></div>
+                    <div id="next" class="button_able"></div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide page5" id="storyNavPage">
+            <div class="storyNav"></div>
+            <div class="storyCatalog">
+                <table>
+                    <tr>
+                        <td class="cata7"></td>
+                        <td class="cata1"></td>
+                    </tr>
+                    <tr>
+                        <td class="cata8"></td>
+                        <td class="cata2"></td>
+                    </tr>
+                    <tr>
+                        <td class="cata9"></td>
+                        <td class="cata3"></td>
+                    </tr>
+                    <tr>
+                        <td class="cata10"></td>
+                        <td class="cata4"></td>
+                    </tr>
+                    <tr>
+                        <td class="cata11"></td>
+                        <td class="cata5"></td>
+                    </tr>
+                    <tr>
+                        <td class="cata12"></td>
+                        <td class="cata6"></td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+        <!-- **************** page:story1 ******************** -->
+        <div class="swiper-slide page6" id="page1">
+            <div class="storyBack" id="storyBack1"></div>
+            <div class="voice" id="voice1">
+                <audio id="audio1" hidden="hidden">
+                    <source src="http://res.dyclub.org/audio/15music.mp3" type="audio/mpeg">
+                </audio>
+                <div class="wifi" id="wifi1"></div>
+            </div>
+            <div class="storyTitle" id="storyTitle1"></div>
+            <div class="storyTextDiv" id="storyTextDiv1">
+                <div class='storyText' id="storyText1">
+                    <!-- 当文章长度少于一页时，开启right=0属性，固定于右侧无需滑动-->
+                    <img class="storyTextImg" id="storyTextImg1" src="img/story/text15.png" style="right: 0;">
+                </div>
+            </div>
+            <div class="storyImg" id="storyImg1">
+                <div class="storyPic" id="storyPic1"></div>
+                <img src="img/click.gif" class="clickImg" id="clickImg1">
+            </div>
+            <div class="showPic" id="showPic1">
+                <div class="storyShowDataPic" id="storyShowDataPic1"></div>
+            </div>
+        </div>
+        <!-- **************** page:story2 ******************** -->
+        <div class="swiper-slide page7" id="page2">
+            <div class="storyBack" id="storyBack2"></div>
+            <div class="voice" id="voice2">
+                <audio id="audio2" hidden="hidden">
+                    <source src="http://res.dyclub.org/audio/25music.mp3" type="audio/mpeg">
+                </audio>
+                <div class="wifi" id="wifi2"></div>
+            </div>
+            <div class="storyTitle" id="storyTitle2"></div>
+            <div class="storyTextDiv" id="storyTextDiv2">
+                <div class='storyText' id="storyText2">
+                    <img class="storyTextImg" id="storyTextImg2" src="img/story/text25.png" style="right: 0;">
+                </div>
+            </div>
+            <div class="storyImg" id="storyImg2">
+                <div class="storyPic" id="storyPic2"></div>
+                <img src="img/click.gif" class="clickImg" id="clickImg2">
+            </div>
+            <div class="showPic" id="showPic2">
+                <div class="storyShowDataPic" id="storyShowDataPic2"></div>
+            </div>
+        </div>
+        <!-- **************** page:story3 ******************** -->
+        <div class="swiper-slide page8" id="page3">
+            <div class="storyBack" id="storyBack3"></div>
+            <div class="voice" id="voice3">
+                <audio id="audio3" hidden="hidden">
+                    <source src="http://res.dyclub.org/audio/35music.mp3" type="audio/mpeg">
+                </audio>
+                <div class="wifi" id="wifi3"></div>
+            </div>
+            <div class="storyTitle" id="storyTitle3"></div>
+            <div class="storyTextDiv" id="storyTextDiv3">
+                <div class='storyText' id="storyText3">
+                    <img class="storyTextImg" id="storyTextImg3" src="img/story/text35.png">
+                </div>
+            </div>
+            <div class="storyImg" id="storyImg3">
+                <div class="storyPic" id="storyPic3"></div>
+                <img src="img/click.gif" class="clickImg" id="clickImg3">
+            </div>
+            <div class="showPic" id="showPic3">
+                <div class="storyShowDataPic" id="storyShowDataPic3"></div>
+            </div>
+        </div>
+        <!-- **************** page:story4 ******************** -->
+        <div class="swiper-slide page9" id="page4">
+            <div class="storyBack" id="storyBack4"></div>
+            <div class="voice" id="voice4">
+                <audio id="audio4" hidden="hidden">
+                    <source src="http://res.dyclub.org/audio/45music.mp3" type="audio/mpeg">
+                </audio>
+                <div class="wifi" id="wifi4"></div>
+            </div>
+            <div class="storyTitle" id="storyTitle4"></div>
+            <div class="storyTextDiv" id="storyTextDiv4">
+                <div class='storyText' id="storyText4">
+                    <img class="storyTextImg" id="storyTextImg4" src="img/story/text45.png">
+                </div>
+            </div>
+            <div class="storyImg" id="storyImg4">
+                <div class="storyPic" id="storyPic4"></div>
+                <img src="img/click.gif" class="clickImg" id="clickImg4">
+            </div>
+            <div class="showPic" id="showPic4">
+                <div class="storyShowDataPic" id="storyShowDataPic4"></div>
+            </div>
+        </div>
+        <!-- **************** page:story5 ******************** -->
+        <div class="swiper-slide  page10" id="page5">
+            <div class="storyBack" id="storyBack5"></div>
+            <div class="voice" id="voice5">
+                <audio id="audio5" hidden="hidden">
+                    <source src="http://res.dyclub.org/audio/55music.mp3" type="audio/mpeg">
+                </audio>
+                <div class="wifi" id="wifi5"></div>
+            </div>
+            <div class="storyTitle" id="storyTitle5"></div>
+            <div class="storyTextDiv" id="storyTextDiv5">
+                <div class='storyText' id="storyText5">
+                    <img class="storyTextImg" id="storyTextImg5" src="img/story/text55.png">
+                </div>
+            </div>
+            <div class="storyImg" id="storyImg5">
+                <div class="storyPic" id="storyPic5"></div>
+                <img src="img/click.gif" class="clickImg" id="clickImg5">
+            </div>
+            <div class="showPic" id="showPic5">
+                <div class="storyShowDataPic" id="storyShowDataPic5"></div>
+            </div>
+        </div>
+        <!-- **************** page:story6 ******************** -->
+        <div class="swiper-slide  page11" id="page6">
+            <div class="storyBack" id="storyBack6"></div>
+            <div class="voice" id="voice6">
+                <audio id="audio6" hidden="hidden">
+                    <source src="http://res.dyclub.org/audio/65music.mp3" type="audio/mpeg">
+                </audio>
+                <div class="wifi" id="wifi6"></div>
+            </div>
+            <div class="storyTitle" id="storyTitle6"></div>
+            <div class="storyTextDiv" id="storyTextDiv6">
+                <div class='storyText' id="storyText6">
+                    <img class="storyTextImg" id="storyTextImg6" src="img/story/text65.png">
+                </div>
+            </div>
+            <div class="storyImg" id="storyImg6">
+                <div class="storyPic" id="storyPic6"></div>
+                <img src="img/click.gif" class="clickImg" id="clickImg6">
+            </div>
+            <div class="showPic" id="showPic6">
+                <div class="storyShowDataPic" id="storyShowDataPic6"></div>
+            </div>
+        </div>
+        <!-- **************** page:story7 ******************** -->
+        <div class="swiper-slide  page12" id="page7">
+            <div class="storyBack" id="storyBack7"></div>
+            <div class="voice" id="voice7">
+                <audio id="audio7" hidden="hidden">
+                    <source src="http://res.dyclub.org/audio/75music.mp3" type="audio/mpeg">
+                </audio>
+                <div class="wifi" id="wifi7"></div>
+            </div>
+            <div class="storyTitle" id="storyTitle7"></div>
+            <div class="storyTextDiv" id="storyTextDiv7">
+                <div class='storyText' id="storyText7">
+                    <img class="storyTextImg" id="storyTextImg7" src="img/story/text75.png">
+                </div>
+            </div>
+            <div class="storyImg" id="storyImg7">
+                <div class="storyPic" id="storyPic7"></div>
+                <img src="img/click.gif" class="clickImg" id="clickImg7">
+            </div>
+            <div class="showPic" id="showPic7">
+                <div class="storyShowDataPic" id="storyShowDataPic7"></div>
+            </div>
+        </div>
+        <!-- **************** page:story8 ******************** -->
+        <div class="swiper-slide  page13" id="page8">
+            <div class="storyBack" id="storyBack8"></div>
+            <div class="voice" id="voice8">
+                <audio id="audio8" hidden="hidden">
+                    <source src="http://res.dyclub.org/audio/85music.mp3" type="audio/mpeg">
+                </audio>
+                <div class="wifi" id="wifi8"></div>
+            </div>
+            <div class="storyTitle" id="storyTitle8"></div>
+            <div class="storyTextDiv" id="storyTextDiv8">
+                <div class='storyText' id="storyText8">
+                    <img class="storyTextImg" id="storyTextImg8" src="img/story/text85.png">
+                </div>
+            </div>
+            <div class="storyImg" id="storyImg8">
+                <div class="storyPic" id="storyPic8"></div>
+                <img src="img/click.gif" class="clickImg" id="clickImg8">
+            </div>
+            <div class="showPic" id="showPic8">
+                <div class="storyShowDataPic" id="storyShowDataPic8"></div>
+            </div>
+        </div>
+        <!-- **************** page:story9 ******************** -->
+        <div class="swiper-slide  page14" id="page9">
+            <div class="storyBack" id="storyBack9"></div>
+            <div class="voice" id="voice9">
+                <audio id="audio9" hidden="hidden">
+                    <source src="http://res.dyclub.org/audio/95music.m4a" type="audio/mpeg">
+                </audio>
+                <div class="wifi" id="wifi9"></div>
+            </div>
+            <div class="storyTitle" id="storyTitle9"></div>
+            <div class="storyTextDiv" id="storyTextDiv9">
+                <div class='storyText' id="storyText9">
+                    <img class="storyTextImg" id="storyTextImg9" src="img/story/text95.png">
+                </div>
+            </div>
+            <div class="storyImg" id="storyImg9">
+                <div class="storyPic" id="storyPic9"></div>
+                <img src="img/click.gif" class="clickImg" id="clickImg9">
+            </div>
+            <div class="showPic" id="showPic9">
+                <div class="storyShowDataPic" id="storyShowDataPic9"></div>
+
+            </div>
+        </div>
+        <!-- **************** page:story10 ******************** -->
+        <div class="swiper-slide  page15" id="page10">
+            <div class="storyBack" id="storyBack10"></div>
+            <div class="voice" id="voice10">
+                <audio id="audio10" hidden="hidden">
+                    <source src="http://res.dyclub.org/audio/105music.m4a" type="audio/mpeg">
+                </audio>
+                <div class="wifi" id="wifi10"></div>
+            </div>
+            <div class="storyTitle" id="storyTitle10"></div>
+            <div class="storyTextDiv" id="storyTextDiv10">
+                <div class='storyText' id="storyText10">
+                    <img class="storyTextImg" id="storyTextImg10" src="img/story/text105.png">
+                </div>
+            </div>
+            <div class="storyImg" id="storyImg10">
+                <div class="storyPic" id="storyPic10"></div>
+                <img src="img/click.gif" class="clickImg" id="clickImg10">
+            </div>
+            <div class="showPic" id="showPic10">
+                <div class="storyShowDataPic" id="storyShowDataPic10"></div>
+
+            </div>
+        </div>
+        <!-- **************** page:story11 ******************** -->
+        <div class="swiper-slide  page16" id="page11">
+            <div class="storyBack" id="storyBack11"></div>
+            <div class="voice" id="voice11">
+                <audio id="audio11" hidden="hidden">
+                    <source src="http://res.dyclub.org/audio/115music.mp3" type="audio/mpeg">
+                </audio>
+                <div class="wifi" id="wifi11"></div>
+            </div>
+            <div class="storyTitle" id="storyTitle11"></div>
+            <div class="storyTextDiv" id="storyTextDiv11">
+                <div class='storyText' id="storyText11">
+                    <img class="storyTextImg" id="storyTextImg11" src="img/story/text115.png">
+                </div>
+            </div>
+            <div class="storyImg" id="storyImg11">
+                <div class="storyPic" id="storyPic11"></div>
+                <img src="img/click.gif" class="clickImg" id="clickImg11">
+            </div>
+            <div class="showPic" id="showPic11">
+                <div class="storyShowDataPic" id="storyShowDataPic11"></div>
+            </div>
+        </div>
+        <!-- **************** page:story12 ******************** -->
+        <div class="swiper-slide  page17" id="page12">
+            <div class="storyBack" id="storyBack12"></div>
+            <div class="voice" id="voice12">
+                <audio id="audio12" hidden="hidden">
+                    <source src="http://res.dyclub.org/audio/125music.mp3" type="audio/mpeg">
+                </audio>
+                <div class="wifi" id="wifi12"></div>
+            </div>
+            <div class="storyTitle" id="storyTitle12"></div>
+            <div class="storyTextDiv" id="storyTextDiv12">
+                <div class='storyText' id="storyText12">
+                    <img class="storyTextImg" id="storyTextImg12" src="img/story/text125.png">
+                </div>
+            </div>
+            <div class="storyImg" id="storyImg12">
+                <div class="storyPic" id="storyPic12"></div>
+                <img src="img/click.gif" class="clickImg" id="clickImg12">
+            </div>
+            <div class="showPic" id="showPic12">
+                <div class="storyShowDataPic" id="storyShowDataPic12"></div>
+            </div>
+        </div>
+        <!-- **************** page18 ******************** -->
+        <div class="swiper-slide page18" id="page18">
+                <div class="absolute ani"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s" id="p18_1"><img src="img/p18_1.png" /></div>
+                <div class="absolute ani"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.8s" swiper-animate-delay="0.9s" id="p18_2"><img src="img/p18_2.png" /></div>
+                <div class="absolute ani"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.8s" swiper-animate-delay="1.2s" id="p18_3"><img src="img/p18_3.png" /></div>
+                <div class="absolute ani"  swiper-animate-effect="fadeIn" swiper-animate-duration="0.8s" swiper-animate-delay="1.5s" id="p18_4"><img src="img/p18_4.png" /></div>
+                <div class="absolute ani"  swiper-animate-effect="fly" swiper-animate-duration="6s" swiper-animate-delay="0s" id="p18_5"><img src="img/p18_5.png" /></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="js/swiper-3.3.1.jquery.min.js"></script>
+<script type="text/javascript" src="js/swiper.animate1.0.2.min.js"></script>
+<script type="text/javascript" src="js/d3.min.js"></script>
+<script type="text/javascript" src="http://static.dyclub.org/js/utils/share/share.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="js/custom.js"></script><!--自定义js-->
+<script type="text/javascript">
+
+    var title = "两会闭幕。中国60年经济成长记录，你知道多少？";
+    var link = "http://projects.dyclub.org/economy-diary/index.html";
+    var img_url = "http://static.dyclub.org/img/2016/03/economy-diary/share_logo.png";
+    var desc = "镝次元数据传媒实验室出品,2分钟走过中国经济60年成长之路";
+    share(img_url,link,title,desc);
+</script>
+</body>
+</html>
